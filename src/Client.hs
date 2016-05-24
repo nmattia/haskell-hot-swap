@@ -1,9 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main(main) where
 
-import Control.Monad
-import Network.WebSockets
-import qualified Data.ByteString as B
+import           Control.Monad
+import           Network.WebSockets
+
+import qualified Data.ByteString       as B
 import qualified Data.ByteString.Char8 as C8
 
 main :: IO ()

@@ -1,21 +1,23 @@
-{-# LANGUAGE MagicHash, UnboxedTuples #-}
+{-# LANGUAGE MagicHash           #-}
+{-# LANGUAGE OverloadedStrings   #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE UnboxedTuples       #-}
 
 module Main(main) where
 
-import Control.Concurrent.MVar
-import Control.Concurrent (threadDelay)
-import Control.Monad (forever, void)
-import qualified Data.ByteString as B
-import GHC.Exts         ( addrToAny# )
-import GHC.Prim (Addr#)
-import GHC.Ptr          ( Ptr(..) )
-import System.Info      ( os, arch )
-import Encoding
-import ObjLink
-import Network.WebSockets
-import Unsafe.Coerce (unsafeCoerce)
+import           Control.Concurrent      (threadDelay)
+import           Control.Concurrent.MVar
+import           Control.Monad           (forever, void)
+import           Encoding
+import           GHC.Exts                (addrToAny#)
+import           GHC.Prim                (Addr#)
+import           GHC.Ptr                 (Ptr (..))
+import           Network.WebSockets
+import           ObjLink
+import           System.Info             (arch, os)
+import           Unsafe.Coerce           (unsafeCoerce)
+
+import qualified Data.ByteString         as B
 
 type Responder = (B.ByteString -> B.ByteString)
 
