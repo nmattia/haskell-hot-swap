@@ -1,3 +1,8 @@
+
+The inspiration for this came from [this
+post](http://purelyfunctional.org/posts/2016-05-20-dynamic-loading-haskell-module.html)
+by [cocreature](https://github.com/cocreature)
+
 # Toy example of Haskell hot swap of compiled code
 
 This toy example consists of three parts:
